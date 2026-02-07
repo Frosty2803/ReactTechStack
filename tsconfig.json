@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@react-tech-stack/shared": ["workspaces/shared/index.ts"]
+    }
+  }
+}
