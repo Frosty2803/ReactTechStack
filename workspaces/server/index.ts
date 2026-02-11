@@ -7,7 +7,6 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/api/register', (req, res) => {
-  // Validierung im Backend mit dem geteilten Schema!
   const result = registerSchema.safeParse(req.body);
   
   if (!result.success) {
@@ -17,4 +16,4 @@ app.post('/api/register', (req, res) => {
   res.json({ message: "User registriert", data: result.data });
 });
 
-app.listen(3000, () => console.log("Server läuft auf Port 3000"));
+app.listen(3000, () => console.log("Server running on Port 3000"));
