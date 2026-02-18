@@ -30,7 +30,7 @@ export function LoginView() {
     <>
       <h1>React Tech Stack</h1>
       <h2>Login</h2>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="form">
         <label htmlFor="user">Username / E-Mail</label>
         <InputText id="user" name="user" />
         <label htmlFor="password">Password</label>

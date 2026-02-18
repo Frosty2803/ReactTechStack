@@ -27,7 +27,7 @@ export function RegisterView() {
     <>
       <h1>React Tech Stack</h1>
       <h2>Register</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="form">
         <label htmlFor="username">Username</label>
         <InputText {...register("username")} />
         <label htmlFor="email">E-Mail</label>
