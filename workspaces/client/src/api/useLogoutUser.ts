@@ -1,11 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { API_BASE_URL } from "../constants";
 
 export const useLogoutUser = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: async (token: string) => {
-      const response = await fetch("/logout", {
+      const response = await fetch(API_BASE_URL + "/logout", {
         method: "PUT",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       });

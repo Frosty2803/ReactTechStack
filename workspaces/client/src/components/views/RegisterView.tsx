@@ -2,14 +2,14 @@ import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLoginUser } from "../../api/useLoginUser";
 import { registerSchema, type RegisterInput } from "@react-tech-stack/shared";
 import { useLoginState } from "../../provider/LoginStateProvider";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRegisterUser } from "../../api/useRegisterUser";
 
 export function RegisterView() {
-  const { isPending, error } = useLoginUser();
+  const { mutate: apiRegister, isPending, error } = useRegisterUser();
   const { login } = useLoginState();
   const { register, handleSubmit } = useForm<RegisterInput>({
     resolver: zodResolver(registerSchema),
@@ -18,7 +18,7 @@ export function RegisterView() {
 
   const onSubmit = useCallback(
     (data: RegisterInput) => {
-      login(data);
+      apiRegister(data);
     },
     [login],
   );
