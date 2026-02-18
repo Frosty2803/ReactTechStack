@@ -7,11 +7,11 @@ import { RegisterView } from './components/views/RegisterView';
 export function Router() {
     return (<BrowserRouter>
         <Routes>
-          {/* Öffentliche Routen */}
+          {/* Public routes */}
           <Route path="/login" element={<LoginView />} />
           <Route path="/register" element={<RegisterView />} />
 
-          {/* Geschützte Route */}
+          {/* Only for logged in users */}
           <Route 
             path="/home" 
             element={

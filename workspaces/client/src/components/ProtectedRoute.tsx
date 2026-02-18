@@ -3,9 +3,9 @@ import { useLoginState } from "../provider/LoginStateProvider";
 import { Button } from "primereact/button";
 
 export const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const { isLoggedIn, logout } = useLoginState();
+  const { token, logout } = useLoginState();
 
-  if (!isLoggedIn) {
+  if (!token) {
     return <Navigate to="/login" replace />;
   }
 
