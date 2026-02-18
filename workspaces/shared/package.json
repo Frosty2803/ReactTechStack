@@ -1,7 +1,7 @@
 {
   "name": "@react-tech-stack/shared",
   "version": "1.0.0",
-  "description": "",
+  "description": "Shared types and utils for React Tech Stack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,8 +1,9 @@
 {
-  "name": "client",
+  "name": "@react-tech-stack/client",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Jonas Schmidt",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,10 +12,13 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@react-tech-stack/shared": "^1.0.0",
     "@tanstack/react-query": "^5.90.21",
+    "primereact": "^10.9.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.71.1",
+    "react-router-dom": "^7.13.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
